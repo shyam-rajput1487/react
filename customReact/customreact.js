@@ -1,3 +1,13 @@
+const domElement =document.createElement(reactElement.type)
+document.innerHTML=reactElement.children
+for(const prop in reactElement.props){
+    if (prop==='children')continue; {
+      domElement.setAttribute(prop,reactElement.props[prop])  
+    }
+    container.appendChild(domElement)
+}
+
+
 const reactElement={
     type:'a',
     props:{
@@ -7,7 +17,8 @@ const reactElement={
     children:'Click me to visit google'
 }
 
-const mainContainer =document.querySelector('root');
+const mainContainer =document.querySelector('#root');
 
 customRender(reactElement,mainContainer);
 
+console.log("hello wold")
